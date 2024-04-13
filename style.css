@@ -19,6 +19,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
@@ -48,6 +49,8 @@ nav ul li a:hover {
 
 section {
     padding: 40px;
+    position: relative;
+    overflow: hidden;
 }
 
 .gallery {
@@ -55,42 +58,25 @@ section {
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
-}
-
-.gallery h2 {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.thumbnails {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 20px;
-}
-
-.thumbnails img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-.thumbnails img:hover {
-    transform: scale(1.05);
+    animation: fadeIn 1s ease;
 }
 
 .contact {
     background-color: #f5f5f5;
-    text-align: center;
     border-radius: 10px;
-    padding: 40px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease;
 }
 
-.contact h2 {
-    margin-bottom: 20px;
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 30px;
 }
 
 footer {
@@ -101,6 +87,8 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease;
 }
 
 .footer-container {
@@ -140,4 +128,82 @@ footer {
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
+}
+
+/* Hover effect on header */
+header:hover {
+    background-image: linear-gradient(to right, #4A90E2, #4FC3F7);
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom submit button */
+.submit-btn {
+    display: block;
+    margin: 20px auto 0; /* Center the button */
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #4A90E2; /* Blue color */
+    border: none;
+    border-radius: 25px; /* Increased border-radius for a rounded button */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added box-shadow for depth */
+}
+
+.submit-btn:hover {
+    background-color: #357EC7;
+}
+
+/* Custom checkbox */
+input[type="checkbox"] {
+    appearance: none; /* Remove default checkbox appearance */
+    width: 20px;
+    height: 20px;
+    border: 2px solid #4A90E2;
+    border-radius: 5px; /* Rounded corners for checkbox */
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #4A90E2; /* Change background color when checked */
+    border-color: #4A90E2; /* Change border color when checked */
+}
+
+/* Gallery styles */
+.thumbnails {
+    display: flex; /* Use flexbox to create a horizontal layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    justify-content: center; /* Center items horizontally */
+    align-items: flex-start; /* Align items at the top of the container */
+}
+
+.thumbnails > div {
+    flex: 0 0 calc(25% - 20px); /* Set width for each sticker item */
+    margin: 0 10px; /* Add some margin between items */
+}
+
+.thumbnails img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.thumbnails img:hover {
+    transform: scale(1.05);
 }
