@@ -3,11 +3,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const selectionForm = document.getElementById('selectionForm');
 
     const totalImages = 257; // Change this to match the total number of images
+    const imageExtension = 'JPG'; // Change this to match the image file extension
 
     // Generate thumbnails with checkboxes
     for (let i = 1; i <= totalImages; i++) {
         const img = document.createElement('img');
-        img.src = `images/stiker (${i}).JPG`;
+        img.src = `images/stiker (${i}).${imageExtension}`;
         img.alt = `Sticker ${i}`;
 
         const checkbox = document.createElement('input');
