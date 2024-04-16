@@ -1,8 +1,9 @@
+// Your existing JavaScript code
 document.addEventListener("DOMContentLoaded", function() {
     const thumbnailsContainer = document.querySelector('.thumbnails');
     const selectionForm = document.getElementById('selectionForm');
 
-    const totalImages = 257; // Change this to match the total number of images
+    const totalImages = 331; // Change this to match the total number of images
     const imageExtension = 'JPG'; // Change this to match the image file extension
 
     // Generate thumbnails with checkboxes
@@ -26,6 +27,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
         thumbnailsContainer.appendChild(stickerDiv);
     }
+
+    // Unselect all stickers on unselect button click
+    const unselectButton = document.querySelector('.unselect-btn');
+    unselectButton.addEventListener('click', function() {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+            checkbox.checked = false;
+        });
+    });
 
     // Gather selected stickers on form submission
     selectionForm.addEventListener('submit', function(event) {
