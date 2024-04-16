@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+/* Body styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
@@ -12,6 +13,7 @@ body {
     line-height: 1.6;
 }
 
+/* Header styles */
 header {
     background-image: linear-gradient(to right, #4A90E2, #53B7F6);
     color: #fff;
@@ -47,24 +49,19 @@ nav ul li a:hover {
     color: #ddd;
 }
 
+/* Section styles */
 section {
     padding: 40px;
     position: relative;
     overflow: hidden;
 }
 
-.gallery {
+.gallery,
+.contact {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
-    animation: fadeIn 1s ease;
-}
-
-.contact {
-    background-color: #f5f5f5;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     animation: fadeIn 1s ease;
 }
 
@@ -79,6 +76,7 @@ section {
     margin-top: 30px;
 }
 
+/* Footer styles */
 footer {
     background-color: #333;
     color: #fff;
@@ -97,6 +95,7 @@ footer {
     align-items: center;
 }
 
+/* Lightbox styles */
 .lightbox {
     display: none;
     position: fixed;
@@ -130,11 +129,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Hover effect on header */
-header:hover {
-    background-image: linear-gradient(to right, #4A90E2, #4FC3F7);
-}
-
 /* Keyframe animations */
 @keyframes fadeIn {
     from {
@@ -147,7 +141,7 @@ header:hover {
     }
 }
 
-/* Custom submit button */
+/* Custom button styles */
 .submit-btn {
     display: block;
     margin: 20px auto 0; /* Center the button */
@@ -166,7 +160,7 @@ header:hover {
     background-color: #357EC7;
 }
 
-/* Custom checkbox */
+/* Custom checkbox styles */
 input[type="checkbox"] {
     appearance: none; /* Remove default checkbox appearance */
     width: 20px;
@@ -206,4 +200,84 @@ input[type="checkbox"]:checked {
 
 .thumbnails img:hover {
     transform: scale(1.05);
+}
+
+/* Contact section styles */
+.contact {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease;
+    padding: 40px;
+    text-align: center; /* Center align text */
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+    color: #333; /* Dark text color */
+}
+
+.contact p {
+    margin-bottom: 10px;
+    color: #555; /* Slightly lighter text color */
+}
+
+/* Unselect button styles */
+.unselect-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #FF6347; /* Coral color for contrast */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.unselect-btn:hover {
+    background-color: #FF4837; /* Darker coral color on hover */
+}
+/* Your existing CSS styles */
+
+/* Additional styles for enhanced visual appeal and user interaction */
+/* Button hover effect */
+.unselect-btn:hover {
+    background-color: #FF4837; /* Darker coral color on hover */
+}
+
+/* Contact section styles */
+.contact {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease;
+    padding: 40px;
+    text-align: center; /* Center align text */
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+    color: #333; /* Dark text color */
+}
+
+.contact p {
+    margin-bottom: 10px;
+    color: #555; /* Slightly lighter text color */
+}
+/* Centered form container */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px; /* Adjust margin as needed */
+}
+
+/* Styling for the embedded form */
+.form-container iframe {
+    border: none; /* Remove iframe border */
+    max-width: 100%; /* Ensure form doesn't exceed container width */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    border-radius: 10px; /* Rounded corners for the form */
 }
