@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const thumbnailsContainer = document.querySelector('.thumbnails');
     const selectionForm = document.getElementById('selectionForm');
 
-    const totalImages = 257; // Change this to match the total number of images
+    const totalImages = 331; // Change this to match the total number of images
     const imageExtension = 'JPG'; // Change this to match the image file extension
 
     // Generate thumbnails with checkboxes
